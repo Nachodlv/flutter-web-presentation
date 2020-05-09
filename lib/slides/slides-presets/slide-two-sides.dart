@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:hello_world/widgets/dart-code.dart';
 
 class SlideTwoSides extends StatelessWidget {
@@ -32,9 +33,9 @@ class SlideTwoSides extends StatelessWidget {
                       children: [
                         ...paragraphs.map((text) => Padding(
                             padding: EdgeInsets.all(20),
-                            child: Text(
-                              text,
-                              style:
+                            child: Html(
+                              data: text,
+                              defaultTextStyle:
                                   TextStyle(color: Colors.black, fontSize: 30),
                             )))
                       ])

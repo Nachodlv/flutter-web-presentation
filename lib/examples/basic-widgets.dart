@@ -9,12 +9,12 @@ class MyScaffold extends StatelessWidget {
         MyAppBar(
           title: Text(
             'More Widgets!',
-            style: Theme.of(context).primaryTextTheme.headline6,
+            style: Theme.of(context).primaryTextTheme.headline4,
           ),
         ),
         Expanded(
           child: Center(
-            child: Text('Hello, world!'),
+            child: Text('Hello, world!', style: TextStyle(fontSize: 40),),
           ),
         ),
       ],
@@ -32,7 +32,7 @@ class MyAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 56.0, // in logical pixels
+      height: 100, // in logical pixels
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       decoration: BoxDecoration(color: Colors.blue[500]),
       // Row is a horizontal, linear layout.

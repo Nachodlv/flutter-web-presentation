@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/widgets/dart-code.dart';
+import 'package:flutter_html/flutter_html.dart';
 
 class NormalSlide extends StatelessWidget {
   final String title;
@@ -17,7 +17,7 @@ class NormalSlide extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+                padding: EdgeInsets.fromLTRB(30, 50, 30, 20),
                 child: Text(title,
                     style: TextStyle(
                         color: Colors.black,
@@ -29,10 +29,9 @@ class NormalSlide extends StatelessWidget {
                 children: <Widget>[
                   ...paragraphs.map((text) => Padding(
                       padding: EdgeInsets.symmetric(vertical: 20,  horizontal: 30),
-                      child: Text(
-                        text,
-                        style: TextStyle(color: Colors.black, fontSize: 30),
-                        textAlign: TextAlign.left,
+                      child: Html(
+                        data: text,
+                        defaultTextStyle: TextStyle(color: Colors.black, fontSize: 30),
                       )))
                 ],
               )

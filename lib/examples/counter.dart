@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 
+class CounterContainer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: Counter());
+  }
+}
+
 class Counter extends StatefulWidget {
   // This class is the configuration for the state. It holds the
   // values (in this case nothing) provided by the parent and used
@@ -34,13 +42,18 @@ class _CounterState extends State<Counter> {
     // needs updating rather than having to individually change
     // instances of widgets.
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         RaisedButton(
           onPressed: _increment,
           child: Text('Increment'),
         ),
-        Text('Count: $_counter'),
+        Padding(
+          padding: const EdgeInsets.only(left: 8),
+          child: Text('Count: $_counter'),
+        ),
       ],
     );
   }
+
 }

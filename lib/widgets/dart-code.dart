@@ -6,7 +6,7 @@ class DartCode extends StatelessWidget {
   final String code;
   final double fontSize;
 
-  DartCode(this.code, this.fontSize);
+  DartCode(String code, this.fontSize): this.code = code.replaceAll(' ', ' ' * 2);
 
   @override
   Widget build(BuildContext context) {

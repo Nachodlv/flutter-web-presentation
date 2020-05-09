@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 import 'slides-presets/slide-two-sides.dart';
 
-class SecondSlide extends StatelessWidget {
+class WidgetsSlide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SlideTwoSides(
@@ -12,16 +12,14 @@ class SecondSlide extends StatelessWidget {
         "When a widget’s state changes the framework makes the minimal changes needed to transition from one state to the next."
       ],
       code: """
-      import 'package:flutter/material.dart';
-      
       void main() {
         runApp(
-          Center(
+          return Center(
             child: Text(
               'Hello, world!',
-              textDirection: TextDirection.ltr,
+              style: TextStyle(color: Colors.blue, fontSize: 40),
             ),
-          ),
+          );
         );
       }
       """,
