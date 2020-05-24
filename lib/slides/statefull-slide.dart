@@ -8,8 +8,8 @@ class StatefullSlide extends StatelessWidget {
     return SlideTwoSides(
       title: "Stateless vs Stateful Widgets",
       paragraphs: [
-        "<b>StatelessWidgets</b>Receive arguments from their parent widget, which they store in final member variables. When a widget is asked to build(), it uses these stored values to derive new arguments for the widgets it creates.",
-        "<b>StatefulWidgets</b>Are special widgets that know how to generate State objects, which are then used to hold state. <br>State objects are persistent between calls to build(), Widgets are temporary."
+        "<b>StatelessWidgets</b> receive arguments from their parent widget, which they store in final member variables. When a widget is asked to build(), it uses these stored values to derive new arguments for the widgets it creates.",
+        "<b>StatefulWidgets</b> are special widgets that know how to generate State objects, which are then used to hold state. <br>State objects are persistent between calls to build(), Widgets are temporary."
       ],
       code: """
       class Counter extends StatefulWidget {

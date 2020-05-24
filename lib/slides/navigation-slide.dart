@@ -8,8 +8,8 @@ class NavigationSlide extends StatelessWidget {
     return SlideTwoSides(
       title: "Navigation",
       paragraphs: [
-        "<p>The <b>push()</b>method adds a Route to the stack of routes managed by the Navigator</p>",
-        "<p>The <b>pop()</b>method removes the current Route from the stack of routes managed by the Navigator.</p>"
+        "<p>The <b>push()</b> method adds a Route to the stack of routes managed by the Navigator</p>",
+        "<p>The <b>pop()</b> method removes the current Route from the stack of routes managed by the Navigator.</p>"
       ],
       code: """
      class FirstScreen extends StatelessWidget {
@@ -38,4 +38,5 @@ class NavigationSlide extends StatelessWidget {
       """,
     );
   }
+  
 }

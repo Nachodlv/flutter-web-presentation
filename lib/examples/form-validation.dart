@@ -11,7 +11,12 @@ class FormValidation extends StatelessWidget {
         appBar: AppBar(
           title: Text(appTitle),
         ),
-        body: MyCustomForm(),
+        body: Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width * 0.4,
+              vertical: MediaQuery.of(context).size.height * 0.25),
+          child: MyCustomForm(),
+        ),
       ),
     );
   }
@@ -41,7 +46,8 @@ class MyCustomFormState extends State<MyCustomForm> {
     return Form(
       key: _formKey,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           TextFormField(
             validator: (value) {

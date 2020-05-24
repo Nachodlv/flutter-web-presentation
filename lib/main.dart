@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/slides/form-validation-slide.dart';
+import 'package:hello_world/slides/introduction-slide.dart';
 import 'package:hello_world/slides/navigation-slide.dart';
 import 'package:hello_world/slides/statefull-slide.dart';
+import 'package:hello_world/slides/web-support-slide.dart';
 import 'examples/basic-widgets.dart';
 import 'examples/counter.dart';
 import 'examples/form-validation.dart';
@@ -19,9 +22,7 @@ void main() {
     home: Material(child: Presenter(_getSlides())),
     initialRoute: '/',
     routes: {
-      // When navigating to the "/" route, build the FirstScreen widget.
       '/navigation/first': (context) => FirstScreenRoute(),
-      // When navigating to the "/second" route, build the SecondScreen widget.
       '/navigation/second': (context) => SecondScreenRoute(),
     },
   ));
@@ -30,6 +31,8 @@ void main() {
 List<Widget> _getSlides() {
   return [
     TitleSlide(),
+    IntroductionSlide(),
+    WebSupportSlide(),
     WidgetsSlide(),
     HelloWorld(),
     MoreWidgetsSlide(),
@@ -39,6 +42,7 @@ List<Widget> _getSlides() {
     NavigationSlide(),
     Navigation(),
     NavigationRoutes(),
+    FormValidationSlide(),
     FormValidation()
   ];
 }
