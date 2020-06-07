@@ -15,7 +15,7 @@ class NormalTextSlide extends StatelessWidget {
         paragraphs: paragraphs
             .map((text) => HtmlWidget(
                   text,
-                  textStyle: TextStyle(color: Colors.black, fontSize: 30),
+                  textStyle: TextStyle(color: Colors.black, fontSize: 40),
                 ))
             .toList());
   }

@@ -13,7 +13,7 @@ class TitleSlide extends StatelessWidget {
                 left: 30,
                 top: 30,
                 child: Text("DPOI",
-                    style: TextStyle(color: Colors.black, fontSize: 20))),
+                    style: TextStyle(color: Colors.black, fontSize: 30))),
             Positioned(
                 left: 30,
                 top: 250,
@@ -29,7 +29,7 @@ class TitleSlide extends StatelessWidget {
                 bottom: 60,
                 child: Text(
                   "Ignacio de la Vega",
-                  style: TextStyle(color: Colors.black, fontSize: 25),
+                  style: TextStyle(color: Colors.black, fontSize: 30),
                 )),
           ],
         ),

@@ -7,10 +7,10 @@ class WebSupportSlide extends StatelessWidget {
     return NormalSlide(title: "Web Support", paragraphs: [
       Text(
           "Compile existing Flutter code written in Dart into a client experience that can be embedded in the browser and deployed to any web server",
-          style: TextStyle(color: Colors.black, fontSize: 30)),
+          style: TextStyle(color: Colors.black, fontSize: 40)),
       Text(
           "Flutter Web is currently on beta and it is not recommended to use in production",
-          style: TextStyle(color: Colors.black, fontSize: 30)),
+          style: TextStyle(color: Colors.black, fontSize: 40)),
       Center(
         child: Image(image: AssetImage('assets/images/web-support.png')),
       )

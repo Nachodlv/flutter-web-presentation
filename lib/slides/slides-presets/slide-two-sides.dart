@@ -2,13 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:hello_world/widgets/dart-code.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
-
 class SlideTwoSides extends StatelessWidget {
   final String title;
   final List<String> paragraphs;
   final String code;
+  final EdgeInsets padding;
 
-  SlideTwoSides({@required this.title, @required this.paragraphs, @required this.code});
+  SlideTwoSides(
+      {@required this.title,
+      @required this.paragraphs,
+      @required this.code,
+      EdgeInsets padding})
+      : this.padding = padding ?? EdgeInsets.all(20);
 
   @override
   Widget build(BuildContext context) {
@@ -26,18 +31,19 @@ class SlideTwoSides extends StatelessWidget {
                     child: Text(title,
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 40,
+                            fontSize: 50,
                             fontWeight: FontWeight.bold)),
                   ),
                   Column(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         ...paragraphs.map((text) => Padding(
-                            padding: EdgeInsets.all(20),
+                            padding: padding,
                             child: HtmlWidget(
                               text,
                               textStyle:
-                                  TextStyle(color: Colors.black, fontSize: 30),
+                                  TextStyle(color: Colors.black, fontSize: 40),
                             )))
                       ])
                 ],

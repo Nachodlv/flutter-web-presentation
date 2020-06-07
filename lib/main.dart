@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/slides/dart-introduction-slide.dart';
 import 'package:hello_world/slides/form-validation-slide.dart';
+import 'package:hello_world/slides/future-slide.dart';
 import 'package:hello_world/slides/introduction-slide.dart';
 import 'package:hello_world/slides/navigation-slide.dart';
+import 'package:hello_world/slides/stacked-slide.dart';
 import 'package:hello_world/slides/statefull-slide.dart';
 import 'package:hello_world/slides/web-support-slide.dart';
 import 'examples/basic-widgets.dart';
@@ -32,6 +35,7 @@ List<Widget> _getSlides() {
   return [
     TitleSlide(),
     IntroductionSlide(),
+    DartIntroductionSlide(),
     WebSupportSlide(),
     WidgetsSlide(),
     HelloWorld(),
@@ -43,6 +47,8 @@ List<Widget> _getSlides() {
     Navigation(),
     NavigationRoutes(),
     FormValidationSlide(),
-    FormValidation()
+    FormValidation(),
+    FutureSlide(),
+    StackedSlide(),
   ];
 }

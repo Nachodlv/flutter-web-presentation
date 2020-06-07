@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 class NormalSlide extends StatelessWidget {
   final String title;
   final List<Widget> paragraphs;
+  final EdgeInsets padding;
 
-  NormalSlide({@required this.title, @required this.paragraphs});
+  NormalSlide(
+      {@required this.title, @required this.paragraphs, EdgeInsets padding})
+      : this.padding =
+            padding ?? EdgeInsets.symmetric(vertical: 20, horizontal: 30);
 
   @override
   Widget build(BuildContext context) {
@@ -21,16 +25,13 @@ class NormalSlide extends StatelessWidget {
                 child: Text(title,
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 40,
+                        fontSize: 50,
                         fontWeight: FontWeight.bold)),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: paragraphs
-                    .map((e) => Padding(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-                        child: e))
+                    .map((e) => Padding(padding: padding, child: e))
                     .toList(),
               )
             ]),
