@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Presenter extends StatelessWidget {
   
@@ -15,10 +16,10 @@ class Presenter extends StatelessWidget {
     return RawKeyboardListener(
       focusNode: _focusNode,
       onKey: (keyEvent) {
-        if(keyEvent.runtimeType.toString() != 'RawKeyDownEvent') return;
-        if(keyEvent.data.physicalKey.debugName == "Arrow Right") 
+        if(keyEvent.runtimeType != RawKeyDownEvent) return;
+        if(keyEvent.data.keyLabel == "ArrowRight") 
           _pageController.nextPage(duration: Duration(milliseconds: 400), curve: Curves.easeInOut);
-        else if(keyEvent.data.physicalKey.debugName == "Arrow Left") 
+        else if(keyEvent.data.keyLabel == "ArrowLeft") 
           _pageController.previousPage(duration: Duration(milliseconds: 400), curve: Curves.easeInOut);
       },
       child: PageView(
